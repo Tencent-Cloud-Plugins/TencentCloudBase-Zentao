@@ -18,8 +18,7 @@
           "envVariables": {
             "ADMINER_USER": "{{env.ADMINER_USER}}",
             "ADMINER_PASSWD": "{{env.ADMINER_PASSWD}}",
-            "BIND_ADDRESS": false,
-            "TCB_NOT_SHOW_CYNOS_DB": "${Outputs.zentao.Properties.InstanceId}"
+            "BIND_ADDRESS": false
           },
           "initialDelaySeconds": 10,
           "volumeMounts": {
