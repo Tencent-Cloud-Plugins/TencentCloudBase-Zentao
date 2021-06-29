@@ -2,7 +2,7 @@
   <img height="100px" src="./logo.jpeg" />
 </p>
 
-# [MeEdu](https://github.com/idoop/zentao)
+# [Zentao](https://github.com/idoop/zentao)
 
 禅道是第一款国产的开源项目管理软件，可以支持研发项目进行测试管理、计划管理、文档管理、事和事务管理。
 
