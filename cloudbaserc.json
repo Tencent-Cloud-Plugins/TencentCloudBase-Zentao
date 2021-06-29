@@ -42,7 +42,7 @@
         "ADMINER_PASSWD": {
           "description": "初始管理控制台密码",
           "required": true,
-          "default": "zentao123"
+          "default": "123456"
         }
       }
     }
