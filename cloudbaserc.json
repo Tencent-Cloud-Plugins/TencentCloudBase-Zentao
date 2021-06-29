@@ -1,0 +1,52 @@
+{
+  "version": "2.0",
+  "envId": "{{env.ENV_ID}}",
+  "framework": {
+    "name": "zentao",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "serviceName": "zentao",
+          "servicePath": "/",
+          "uploadType": "image",
+          "imageInfo": {
+            "imageUrl": "ccr.ccs.tencentyun.com/tcb-zentao/zentao-tcb:12.5.3"
+          },
+          "containerPort": 80,
+          "customLogs": "stdout,/dev/stdout,/dev/stderr",
+          "envVariables": {
+            "ADMINER_USER": "{{env.ADMINER_USER}}",
+            "ADMINER_PASSWD": "{{env.ADMINER_PASSWD}}",
+            "BIND_ADDRESS": false,
+            "TCB_NOT_SHOW_CYNOS_DB": "${Outputs.zentao.Properties.InstanceId}"
+          },
+          "initialDelaySeconds": 10,
+          "volumeMounts": {
+            "opt/zbox": "zentao-cfs"
+          }
+        }
+      }
+    },
+    "requirement": {
+      "addons": [
+        {
+          "type": "CFS",
+          "name": "zentao-cfs"
+        }
+      ],
+      "environment": {
+        "ADMINER_USER": {
+          "description": "管理控制台账号",
+          "required": true,
+          "default": "admin"
+        },
+        "ADMINER_PASSWD": {
+          "description": "初始管理控制台密码",
+          "required": true,
+          "default": "zentao123"
+        }
+      }
+    }
+  }
+}
