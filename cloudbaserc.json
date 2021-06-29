@@ -17,8 +17,7 @@
           "customLogs": "stdout,/dev/stdout,/dev/stderr",
           "envVariables": {
             "ADMINER_USER": "{{env.ADMINER_USER}}",
-            "ADMINER_PASSWD": "{{env.ADMINER_PASSWD}}",
-            "BIND_ADDRESS": false
+            "ADMINER_PASSWD": "{{env.ADMINER_PASSWD}}"
           },
           "initialDelaySeconds": 10,
           "volumeMounts": {
