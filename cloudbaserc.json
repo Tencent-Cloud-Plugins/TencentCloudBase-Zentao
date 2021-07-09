@@ -37,11 +37,13 @@
         "ADMINER_USER": {
           "description": "管理控制台账号",
           "required": true,
+          "editable": false,
           "default": "admin"
         },
         "ADMINER_PASSWD": {
           "description": "初始管理控制台密码",
           "required": true,
+          "editable": false,
           "default": "123456"
         }
       }
